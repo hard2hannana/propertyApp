@@ -1,10 +1,10 @@
 // Import property data
-import propertyForSaleArr from '/properties/propertyForSaleArr';
+import propertyForSaleArr from '/properties/propertyForSaleArr.js';
 import placeholderPropertyObj from '/properties/placeholderPropertyObj.js';
 
 export default function getPropertyHtml(properties = [placeholderPropertyObj]) {
   return properties.map(property => {
-    const { image, propertyLocation, priceGBP, comment, roomsM2 } = property;
+    const { image,propertyLocation, priceGBP, comment, roomsM2 } = property;
 
     const roomSize = roomsM2.reduce((total, size) => total + size, 0);
 
